@@ -9,6 +9,37 @@ from langchain.chains import RetrievalQA
 from dotenv import load_dotenv 
 import streamlit as st 
 from streamlit_chat import message
+import hmac
+
+def check_password():
+    """ Devuelve 'True' si el usuario ingresó la contraseña correcta
+        Contraseña guardada en secrets.toml """
+
+    def password_entered():
+        """ Chequea si el password ingresado por el usuario es correcto """
+        if hmac.compare_digest(st.session_state["password"], st.secrets["password"]):
+            st.session_state["password_correct"] = True
+            del st.session_state["password"]  # No almacenar el password
+        else:
+            st.session_state["password_correct"] = False
+
+    # Return True si el password se ha validado
+    if st.session_state.get("password_correct", False):
+        return True
+
+    # Mostrar el input para el password
+    st.text_input(
+        "Password", type="password", on_change=password_entered, key="password"
+    )
+    if "password_correct" in st.session_state:
+        st.error("😕 Password incorrecto")
+    return False
+
+
+if not check_password():
+    st.stop()  # No continúa con la ejecución si el password es incorrecto
+
+## --== ACÁ EMPIEZA EL CÓDIGO PRINCIPAL DEL PROGRAMA ==-- ##
 
 # CSS Adicional para el efecto de fuente y fondo. Esto quizás podría ir en un archivo aparte para limpiar el código
 css = """
