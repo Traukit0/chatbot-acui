@@ -1,5 +1,5 @@
 # CHONQUE DEL MONTE
-![Chonque del Monte](/static/img/logo.png)
+![Chonque del Monte](/static/img/LOGO.png)
 
 # Chatbot conversacional utilizando API ChatGPT, Langchaing, Streamlit y Deeplake
 
