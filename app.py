@@ -40,12 +40,13 @@ css = """
 
 </style>
 """
-load_dotenv()
+# load_dotenv() # Descomentar para desarrollo local
 
 # Inicializar variables ambientales y APIs
-os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY')
-os.environ['ACTIVELOOP_TOKEN'] = os.getenv('ACTIVELOOP_TOKEN')
-os.environ['DEEPLAKE_ACCOUNT_NAME']= os.getenv('DEEPLAKE_ACCOUNT_NAME')
+# Cambiar a os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY') para desarrollo local
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+os.environ['ACTIVELOOP_TOKEN'] = st.secrets['ACTIVELOOP_TOKEN']
+os.environ['DEEPLAKE_ACCOUNT_NAME']= st.secrets['DEEPLAKE_ACCOUNT_NAME']
 
 
 st.set_page_config(page_title='CHATBOT ACUICULTURA', layout = 'centered', page_icon = 'random', initial_sidebar_state = 'auto')
