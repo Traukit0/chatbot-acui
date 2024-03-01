@@ -1,9 +1,7 @@
 langchain
 langchain_community
 langchain_openai
-python-dotenv
 streamlit
 streamlit_chat
-unstructured
-unstructured[pdf]
+unstructured==0.7.12
 networkx
