@@ -6,3 +6,4 @@ streamlit_chat
 unstructured==0.7.12
 networkx
 python-dotenv
+deeplake[enterprise]
