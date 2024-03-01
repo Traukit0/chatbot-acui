@@ -4,5 +4,6 @@ langchain_openai
 python-dotenv
 streamlit
 streamlit_chat
+unstructured
 unstructured[pdf]
 networkx
