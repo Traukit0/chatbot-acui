@@ -1,3 +1,6 @@
+# CHONQUE DEL MONTE
+![Chonque del Monte](/static/img/logo.png)
+
 # Chatbot conversacional utilizando API ChatGPT, Langchaing, Streamlit y Deeplake
 
 Este repositorio contiene un simple pero poderoso chatbot construido con Streamlit, OpenAI, Deep Lake y Langchain. El chatbot mantiene memoria conversacional; puede referenciar eventos e intercambios pasados en sus respuestas.
