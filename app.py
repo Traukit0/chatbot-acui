@@ -127,7 +127,7 @@ def embeddings_store():
         dataset_path=f"hub://mcanonesbet/chat-norm")
     print(db)
     db = DeepLake(
-        dataset_path=f"hub://mcanonesbet/chat-norm",
+        dataset_path=f"hub://mcanonesbet/chat-norm-02",
         read_only=True,
         embedding=embeddings,
     )
