@@ -124,7 +124,7 @@ def embeddings_store():
     db = DeepLake.from_documents(
         texts,
         embeddings,
-        dataset_path=f"hub://mcanonesbet/chat-norm")
+        dataset_path=f"hub://mcanonesbet/chat-norm-02")
     print(db)
     db = DeepLake(
         dataset_path=f"hub://mcanonesbet/chat-norm-02",
@@ -142,7 +142,7 @@ def search_db():
     retriever.search_kwargs['fetch_k'] = 100
     # retriever.search_kwargs['maximal_marginal_relevance'] = True
     retriever.search_kwargs['k'] = 10
-    model = ChatOpenAI(model='gpt-3.5-turbo-0125')
+    model = ChatOpenAI(model='gpt-4-turbo')
     qa = RetrievalQA.from_llm(model, retriever=retriever, return_source_documents=True)
     return qa
 
