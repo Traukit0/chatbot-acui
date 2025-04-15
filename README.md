@@ -1,5 +1,6 @@
+⚠️ **Este repositorio está obsoleto y ya no se mantiene.** ⚠️
+
 # CHONQUE DEL MONTE
-![Chonque del Monte](/static/img/LOGO.png)
 
 # Chatbot conversacional utilizando API ChatGPT, Langchaing, Streamlit y Deeplake
 
